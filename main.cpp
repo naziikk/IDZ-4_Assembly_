@@ -3,15 +3,12 @@
 #include <vector>
 #include "ReadData/load_data.cpp"
 #include "RwLockImpl/rw-lock_mutex.cpp"
-#include "RwLockImpl/rw-lock_condvar.cpp"
+//#include "RwLockImpl/rw-lock_condvar.cpp"
 #include <thread>
 
 int main() {
     std::vector<std::string> data_;
     readData(data_);
-    for (const auto note : data_) {
-        std::cout << note << '\n';
-    }
     std::cout << "Enter the name of output file:\n";
     std::string file_name;
     std::cin >> file_name;
@@ -28,7 +25,7 @@ int main() {
 
     std::cout << "----------------------------------------------------------------------------\n";
 
-    RWLockCondvar rw_lock;
+    RWLock rw_lock;
     std::vector<std::thread> threads;
     for (int i = 0; i < 10; i++) {
         int choice = rand() % 2;
