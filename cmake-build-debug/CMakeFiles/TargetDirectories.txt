@@ -1,0 +1,3 @@
+/Users/nazarzakrevskij/CLionProjects/IDZ-4-Assembly/cmake-build-debug/CMakeFiles/IDZ_4_Assembly.dir
+/Users/nazarzakrevskij/CLionProjects/IDZ-4-Assembly/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/nazarzakrevskij/CLionProjects/IDZ-4-Assembly/cmake-build-debug/CMakeFiles/rebuild_cache.dir
