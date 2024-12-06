@@ -28,6 +28,7 @@ int main() {
     RWLock rw_lock;
     std::vector<std::thread> threads;
     for (int i = 0; i < 10; i++) {
+        // делаем выбор операции полностью рандомизированным
         int choice = rand() % 2;
         threads.emplace_back([&, choice]() {
             if (choice == 0) {
@@ -38,20 +39,22 @@ int main() {
             std::cout << "----------------------------------------------------------------------------\n";
         });
     }
-
+    // дождемся завершения всех потоков
     for (auto& thread : threads) {
         thread.join();
     }
     std::cout << "New data:\n";
+    // выведем новые данные на экран
     for (const auto& note : data_) {
         std::cout << note << '\n';
     }
-    // запишем данные в файл
     std::ofstream file(file_name);
+    // в случае ошибки выводим сообщение об ошибке
     if (!file.is_open()) {
         std::cerr << "Error: Unable to open file \"" << file_name << "\".\n";
         return 1;
     }
+    // запишем данные в файл
     for (const auto& note : data_) {
         file << note << '\n';
     }
