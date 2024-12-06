@@ -22,6 +22,284 @@ __Условие задания__
 
 Организован запрос ввода с повторным запросом в случае некорректного ввода. Ввод данных происходит во время выполнения программы.
 
+### Структура проекта
+```sh
+└── IDZ-4_Assembly_/
+    ├── CMakeLists.txt
+    ├── README.md
+    ├── ReadData
+    │   └── load_data.cpp
+    ├── RwLockImpl
+    │   ├── report_images
+    │   ├── rw-lock_OpenMP.cpp
+    │   ├── rw-lock_condvar.cpp
+    │   └── rw-lock_mutex.cpp
+    ├── cmake-build-debug
+    │   ├── .cmake
+    │   ├── .ninja_deps
+    │   ├── .ninja_log
+    │   ├── CMakeCache.txt
+    │   ├── CMakeFiles
+    │   ├── IDZ_4_Assembly
+    │   ├── Testing
+    │   ├── asff
+    │   ├── build.ninja
+    │   ├── cmake_install.cmake
+    │   └── output
+    ├── input.txt
+    └── main.cpp
+```
+
+
+###  Project Index
+<details open>
+	<summary><b><code>IDZ-4_ASSEMBLY_/</code></b></summary>
+	<details> <!-- __root__ Submodule -->
+		<summary><b>__root__</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/CMakeLists.txt'>CMakeLists.txt</a></b></td>
+				<td><code>❯ Конфигурационный файл</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/input.txt'>input.txt</a></b></td>
+				<td><code>❯ Файл для вввода данных</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/main.cpp'>main.cpp</a></b></td>
+				<td><code>❯ Основной метод</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- ReadData Submodule -->
+		<summary><b>ReadData</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/ReadData/load_data.cpp'>load_data.cpp</a></b></td>
+				<td><code>❯ Метод для считывания данных из файла или консоли </code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- RwLockImpl Submodule -->
+		<summary><b>RwLockImpl</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/RwLockImpl/rw-lock_mutex.cpp'>rw-lock_mutex.cpp</a></b></td>
+				<td><code>❯ Реализация rw-lock с помощью 2 mutex-ов</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/RwLockImpl/rw-lock_OpenMP.cpp'>rw-lock_OpenMP.cpp</a></b></td>
+				<td><code>❯ Реализация rw-lock с помощью condition_variable</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/RwLockImpl/rw-lock_condvar.cpp'>rw-lock_condvar.cpp</a></b></td>
+				<td><code>❯ Реализация rw-lock с помощью OpenMP</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- cmake-build-debug Submodule -->
+		<summary><b>cmake-build-debug</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/cmake_install.cmake'>cmake_install.cmake</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.ninja_log'>.ninja_log</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.ninja_deps'>.ninja_deps</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/IDZ_4_Assembly'>IDZ_4_Assembly</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/output'>output</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/build.ninja'>build.ninja</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeCache.txt'>CMakeCache.txt</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/asff'>asff</a></b></td>
+				<td><code>❯ REPLACE-ME</code></td>
+			</tr>
+			</table>
+			<details>
+				<summary><b>CMakeFiles</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/clion-environment.txt'>clion-environment.txt</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/TargetDirectories.txt'>TargetDirectories.txt</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/clion-Debug-log.txt'>clion-Debug-log.txt</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml'>CMakeConfigureLog.yaml</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/cmake.check_cache'>cmake.check_cache</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/rules.ninja'>rules.ninja</a></b></td>
+						<td><code>❯ REPLACE-ME</code></td>
+					</tr>
+					</table>
+					<details>
+						<summary><b>3.27.8</b></summary>
+						<blockquote>
+							<table>
+							<tr>
+								<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake'>CMakeCXXCompiler.cmake</a></b></td>
+								<td><code>❯ REPLACE-ME</code></td>
+							</tr>
+							<tr>
+								<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin'>CMakeDetermineCompilerABI_C.bin</a></b></td>
+								<td><code>❯ REPLACE-ME</code></td>
+							</tr>
+							<tr>
+								<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin'>CMakeDetermineCompilerABI_CXX.bin</a></b></td>
+								<td><code>❯ REPLACE-ME</code></td>
+							</tr>
+							<tr>
+								<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake'>CMakeCCompiler.cmake</a></b></td>
+								<td><code>❯ REPLACE-ME</code></td>
+							</tr>
+							<tr>
+								<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake'>CMakeSystem.cmake</a></b></td>
+								<td><code>❯ REPLACE-ME</code></td>
+							</tr>
+							</table>
+							<details>
+								<summary><b>CompilerIdC</b></summary>
+								<blockquote>
+									<table>
+									<tr>
+										<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c'>CMakeCCompilerId.c</a></b></td>
+										<td><code>❯ REPLACE-ME</code></td>
+									</tr>
+									</table>
+								</blockquote>
+							</details>
+							<details>
+								<summary><b>CompilerIdCXX</b></summary>
+								<blockquote>
+									<table>
+									<tr>
+										<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp'>CMakeCXXCompilerId.cpp</a></b></td>
+										<td><code>❯ REPLACE-ME</code></td>
+									</tr>
+									</table>
+								</blockquote>
+							</details>
+						</blockquote>
+					</details>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>.cmake</b></summary>
+				<blockquote>
+					<details>
+						<summary><b>api</b></summary>
+						<blockquote>
+							<details>
+								<summary><b>v1</b></summary>
+								<blockquote>
+									<details>
+										<summary><b>query</b></summary>
+										<blockquote>
+											<table>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/query/codemodel-v2'>codemodel-v2</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1'>cmakeFiles-v1</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/query/toolchains-v1'>toolchains-v1</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/query/cache-v2'>cache-v2</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											</table>
+										</blockquote>
+									</details>
+									<details>
+										<summary><b>reply</b></summary>
+										<blockquote>
+											<table>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-a6738bc6e8a56d97ac62.json'>toolchains-v1-a6738bc6e8a56d97ac62.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/target-IDZ_4_Assembly-Debug-20abe68c4929bdadba4f.json'>target-IDZ_4_Assembly-Debug-20abe68c4929bdadba4f.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json'>directory-.-Debug-f5ebdc15457944623624.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3c903fad393da23b99f4.json'>codemodel-v2-3c903fad393da23b99f4.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/cache-v2-003e91d81b769a8ab5a6.json'>cache-v2-003e91d81b769a8ab5a6.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-06T07-37-11-0195.json'>index-2024-12-06T07-37-11-0195.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											<tr>
+												<td><b><a href='https://github.com/naziikk/IDZ-4_Assembly_/blob/master/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1cc5d2ba7447da9d5a60.json'>cmakeFiles-v1-1cc5d2ba7447da9d5a60.json</a></b></td>
+												<td><code>❯ REPLACE-ME</code></td>
+											</tr>
+											</table>
+										</blockquote>
+									</details>
+								</blockquote>
+							</details>
+						</blockquote>
+					</details>
+				</blockquote>
+			</details>
+		</blockquote>
+	</details>
+</details>
+
+---
+
+
 ### Базовые требования на 8 баллов
  - В отчете должен быть приведен сценарий, описывающий одновременное поведение представленных в условии задания сущностей в
 терминах предметной области. То есть, описан сценарий, задающий ролевое поведение субъектов и объектов задачи (интерпретация условия с большей степенью детализации происходящего), а не
