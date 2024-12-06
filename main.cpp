@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "load_data.cpp"
-#include "rw-lock_impl/rw-lock_mutex.cpp"
-#include "rw-lock_impl/rw-lock_condvar.cpp"
+#include "ReadData/load_data.cpp"
+#include "RwLockImpl/rw-lock_mutex.cpp"
+#include "RwLockImpl/rw-lock_condvar.cpp"
 #include <thread>
 
 int main() {

@@ -41,7 +41,7 @@ public:
         std::cout << "Writer changing the " << idx << " note...\n";
         std::string new_note = generateNewNote(data[idx].size());
         std::cout << "New note - " << new_note << '\n';
-        data[idx] = new_note;
+        data[idx] = new_note + " (changed)";
     }
 
 private:
