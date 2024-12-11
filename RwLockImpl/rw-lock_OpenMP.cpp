@@ -32,7 +32,7 @@ public:
     }
 
     void Read(std::vector<std::string>& data) {
-#pragma omp critical(read_counter)
+        #pragma omp critical(read_counter)
         {
             ++blocked_readers_; // увеличиваем количество активных читателей
             if (blocked_readers_ == 1) {
@@ -64,7 +64,7 @@ private:
     int blocked_readers_ = 0; // счетчик активных читателей
 
     void EndRead() {
-#pragma omp critical(read_counter)
+        #pragma omp critical(read_counter)
         {
             --blocked_readers_; // уменьшаем количество активных читателей
             if (blocked_readers_ == 0) {
