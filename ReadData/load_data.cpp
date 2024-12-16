@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include </Users/nazarzakrevskij/CLionProjects/IDZ-4-Assembly/RwLockImpl/rw-lock_mutex.cpp>
 
 void readData(std::vector<std::string>& data_) {
     // бесконечный цикл для повторного запроса, если пользователь введет некорректный выбор
@@ -12,15 +13,31 @@ void readData(std::vector<std::string>& data_) {
         std::cin >> choice; // считываем выбор пользователя
 
         if (choice == 1) {
-            std::cout << "Enter the number of notes:\n";
-            int notes_cnt;
-            std::cin >> notes_cnt; // количество записей, которые пользователь хочет ввести
-            data_.resize(notes_cnt); // изменяем размер вектора, чтобы вместить записи
-            for (int i = 0; i < notes_cnt; i++) {
-                std::cout << "Enter the note:\n";
-                std::cin >> data_[i];
+            std::cout << "Choose an option:\n"
+                         "1. Get random data\n"
+                         "2. Enter the data\n";
+            int choice_enter = 0;
+            std::cin >> choice_enter;
+            if (choice_enter == 1) {
+                std::cout << "Generated data:\n";
+                int random = rand() % 15;
+                data_.resize(random); // изменяем размер вектора, чтобы вместить записи
+                for (int i = 0; i < random; i++) {
+                    data_[i] = generateNewNote(rand() % 15);
+                    std::cout << data_[i] << '\n';
+                }
+                break;
+            } else if (choice_enter == 2) {
+                std::cout << "Enter the number of notes:\n";
+                int notes_cnt;
+                std::cin >> notes_cnt; // количество записей, которые пользователь хочет ввести
+                data_.resize(notes_cnt); // изменяем размер вектора, чтобы вместить записи
+                for (int i = 0; i < notes_cnt; i++) {
+                    std::cout << "Enter the note:\n";
+                    std::cin >> data_[i];
+                }
+                break;
             }
-            break;
         } else if (choice == 2) {
             std::cout << "Enter file name:\n";
             std::string file_name;
