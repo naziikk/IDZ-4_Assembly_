@@ -9,7 +9,7 @@
 int main() {
     std::vector<std::string> data_;
     readData(data_);
-    std::cout << "Enter the name of output file:\n";
+    std::cout << "EnterRandomData the name of output file:\n";
     std::string file_name;
     std::cin >> file_name;
     // вся задача сводится к базовой задаче rw-lock (readers-writers lock)

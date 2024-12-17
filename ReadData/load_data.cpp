@@ -7,7 +7,7 @@ void readData(std::vector<std::string>& data_) {
     // бесконечный цикл для повторного запроса, если пользователь введет некорректный выбор
     while (true) {
         std::cout << "Choose an option:\n"
-                     "1. Enter data from console\n"
+                     "1. EnterRandomData data from console\n"
                      "2. Load data from file\n";
         int choice;
         std::cin >> choice; // считываем выбор пользователя
@@ -15,7 +15,7 @@ void readData(std::vector<std::string>& data_) {
         if (choice == 1) {
             std::cout << "Choose an option:\n"
                          "1. Get random data\n"
-                         "2. Enter the data\n";
+                         "2. EnterRandomData the data\n";
             int choice_enter = 0;
             std::cin >> choice_enter;
             if (choice_enter == 1) {
@@ -28,18 +28,18 @@ void readData(std::vector<std::string>& data_) {
                 }
                 break;
             } else if (choice_enter == 2) {
-                std::cout << "Enter the number of notes:\n";
+                std::cout << "EnterRandomData the number of notes:\n";
                 int notes_cnt;
                 std::cin >> notes_cnt; // количество записей, которые пользователь хочет ввести
                 data_.resize(notes_cnt); // изменяем размер вектора, чтобы вместить записи
                 for (int i = 0; i < notes_cnt; i++) {
-                    std::cout << "Enter the note:\n";
+                    std::cout << "EnterRandomData the note:\n";
                     std::cin >> data_[i];
                 }
                 break;
             }
         } else if (choice == 2) {
-            std::cout << "Enter file name:\n";
+            std::cout << "EnterRandomData file name:\n";
             std::string file_name;
             std::cin >> file_name; // имя файла, из которого нужно загрузить данные
             std::ifstream file(file_name); // открываем файл для чтения
