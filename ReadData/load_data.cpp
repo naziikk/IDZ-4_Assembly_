@@ -7,7 +7,7 @@ void readData(std::vector<std::string>& data_) {
     // бесконечный цикл для повторного запроса, если пользователь введет некорректный выбор
     while (true) {
         std::cout << "Choose an option:\n"
-                     "1. EnterRandomData data from console\n"
+                     "1. Enter data from console\n"
                      "2. Load data from file\n";
         int choice;
         std::cin >> choice; // считываем выбор пользователя
@@ -15,7 +15,7 @@ void readData(std::vector<std::string>& data_) {
         if (choice == 1) {
             std::cout << "Choose an option:\n"
                          "1. Get random data\n"
-                         "2. EnterRandomData the data\n";
+                         "2. Enter the data\n";
             int choice_enter = 0;
             std::cin >> choice_enter;
             if (choice_enter == 1) {

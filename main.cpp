@@ -1,17 +1,42 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <pthread.h>
+#include <cstdlib>
+#include <cstring>
 #include "ReadData/load_data.cpp"
+#include "RwLockImpl/rw-lock_condvar.cpp"
 #include "RwLockImpl/rw-lock_mutex.cpp"
-//#include "RwLockImpl/rw-lock_condvar.cpp"
-#include <thread>
+
+struct ThreadArgs {
+    RWLockCondvar* rw_lock;
+    std::vector<std::string>* data;
+    int choice;
+};
+
+void* threadFunction(void* arg) {
+    ThreadArgs* args = static_cast<ThreadArgs*>(arg);
+
+    if (args->choice == 0) {
+        args->rw_lock->Read(*args->data);
+    } else {
+        args->rw_lock->Write(*args->data);
+    }
+
+    std::cout << "----------------------------------------------------------------------------\n";
+
+    delete args;
+    return nullptr;
+}
 
 int main() {
     std::vector<std::string> data_;
     readData(data_);
+
     std::cout << "EnterRandomData the name of output file:\n";
     std::string file_name;
     std::cin >> file_name;
+
     // вся задача сводится к базовой задаче rw-lock (readers-writers lock)
     // https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock
     // для первого решения опишем алгоритм
@@ -25,23 +50,22 @@ int main() {
 
     std::cout << "----------------------------------------------------------------------------\n";
 
-    RWLock rw_lock;
-    std::vector<std::thread> threads;
+    RWLockCondvar rw_lock;
+    pthread_t threads[10];
+
     for (int i = 0; i < 10; i++) {
         // делаем выбор операции полностью рандомизированным
         int choice = rand() % 2;
-        threads.emplace_back([&, choice]() {
-            if (choice == 0) {
-                rw_lock.Read(data_);
-            } else {
-                rw_lock.Write(data_);
-            }
-            std::cout << "----------------------------------------------------------------------------\n";
-        });
+        ThreadArgs* args = new ThreadArgs{&rw_lock, &data_, choice};
+        int result = pthread_create(&threads[i], nullptr, threadFunction, args);
+        if (result != 0) {
+            std::cerr << "Error creating thread: " << strerror(result) << std::endl;
+            return 1;
+        }
     }
     // дождемся завершения всех потоков
-    for (auto& thread : threads) {
-        thread.join();
+    for (int i = 0; i < 10; i++) {
+        pthread_join(threads[i], nullptr);
     }
     std::cout << "New data:\n";
     // выведем новые данные на экран
